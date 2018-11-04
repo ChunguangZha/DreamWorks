@@ -1,0 +1,12 @@
+<!--pages/mall/index.wxml-->
+<view class="banner">
+  <text>Banner：蜜蜂邻家小铺，从田间到舌间</text>
+</view>
+<scroll-view scroll-x="true">
+  <view class='shopitem'></view>
+  <view class='shopitem'></view>
+  <view class='shopitem'></view>
+  <view class='shopitem'></view>
+  <view class='shopitem'></view>
+</scroll-view>
+
