@@ -1,5 +1,5 @@
 <!--pages/mall/shopping-item-details/shopping-item-details.wxml-->
 <view>
-  <image src=''></image>
+  <image src='../../assets/{{shopInfo.imgName}}'></image>
   <button>购买</button>
 </view>

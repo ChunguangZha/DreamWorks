@@ -5,27 +5,10 @@
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="user-motto">{{motto}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="userinfo">
+<shopping-list-item wx:for="{{shoplist}}" wx:key="shopId" myData="{{item.shopId}}"/>
   </view>
-  <scroll-view class="userinfo" scroll-y="true">
-    <shopping-list-large-item-component></shopping-list-large-item-component>
-    <view class='shopitem'>
-      <image src='../assets/rice_1.jpg'></image>
-    </view>
-    <view class='shopitem'>
-      <image src='../assets/ajiao_1.jpg'></image>
-    </view>
-    <view class='shopitem'>
-      <image src='../assets/wine_1.jpg'></image>
-    </view>
-    <view class='shopitem'>
-      <image src='../assets/fruit_1.jpg'></image>
-    </view>
-    <view class='shopitem'>
-      <image src='../assets/honey_1.jpg'></image>
-    </view>
-  </scroll-view>
 </view>

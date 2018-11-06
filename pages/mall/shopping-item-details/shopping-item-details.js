@@ -1,23 +1,43 @@
 // pages/mall/shopping-item-details/shopping-item-details.js
 Page({
+  properties: {
+    shopId: {
+      type: String
+    }
+  },
+  
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgSrc: '',
-    title: '五常大米',
-    desc: '纯正五常新米，五常市民乐乡，源产地直发',
-    price: 120,
-    size: '5KG',
-    url: ''
+    shopInfo: {
+      shopId: 100,
+      imgName: '1.jpg',
+      title: '黑蜂椴树蜜',
+      desc: '产自黑蜂自然保护区',
+      price: 50,
+      size: '500g',
+      url: ''
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    try {
+      wx.getStorage({
+        key: this.shopId,
+        success: function(res) {
+          this.setData({
+            shopInfo: res
+          })
+        },
+      })
+    } catch(e) {
 
+    }
   },
 
   /**

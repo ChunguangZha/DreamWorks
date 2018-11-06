@@ -1,7 +1,7 @@
 /* components/shopping-list-large-item-component/shopping-list-large-item-component.wxss */
 .item {
   width: 100%;
-  height: width;
+  height: 100%;
   margin: 5rpx;
 }
 
