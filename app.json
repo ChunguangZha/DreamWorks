@@ -5,7 +5,8 @@
     "pages/mall/index",
     "pages/mall/promotion/promotion",
     "pages/my/my-index",
-    "pages/cart/cart-index"
+    "pages/cart/cart-index",
+    "pages/mall/shopping-item-details/shopping-item-details"
   ],
   "window": {
     "backgroundTextStyle": "light",

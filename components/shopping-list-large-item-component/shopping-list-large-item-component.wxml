@@ -1,0 +1,8 @@
+<!--components/shopping-list-large-item-component/shopping-list-large-item-component.wxml-->
+<view class='item' bindtap='onTap'>
+  <image src='{{myData.imgSrc}}'></image>
+  <cover-view class='cover'>
+    <text>{{myData.title}}</text>
+    <text>￥{{myData.price}}</text>
+  </cover-view>
+</view>

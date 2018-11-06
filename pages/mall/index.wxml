@@ -3,10 +3,20 @@
   <text>Banner：蜜蜂邻家小铺，从田间到舌间</text>
 </view>
 <scroll-view scroll-x="true">
-  <view class='shopitem'></view>
-  <view class='shopitem'></view>
-  <view class='shopitem'></view>
-  <view class='shopitem'></view>
-  <view class='shopitem'></view>
+  <view class='shopitem'>
+    <image src='../../assets/rice_1.jpg'></image>
+  </view>
+  <view class='shopitem'>
+    <image src='../../assets/ajiao_1.jpg'></image>
+  </view>
+  <view class='shopitem'>
+    <image src='../../assets/wine_1.jpg'></image>
+  </view>
+  <view class='shopitem'>
+    <image src='../../assets/fruit_1.jpg'></image>
+  </view>
+  <view class='shopitem'>
+    <image src='../../assets/honey_1.jpg'></image>
+  </view>
 </scroll-view>
 

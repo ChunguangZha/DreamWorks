@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "shopping-list-large-item-component": "/components/shopping-list-large-item-component/shopping-list-large-item-component"
+  }
+}

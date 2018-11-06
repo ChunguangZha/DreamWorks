@@ -1,0 +1,16 @@
+/* components/shopping-list-large-item-component/shopping-list-large-item-component.wxss */
+.item {
+  width: 100%;
+  height: width;
+  margin: 5rpx;
+}
+
+.cover {
+  width: 5%;
+  margin: 0 5rpx;
+  position: relative;
+  bottom: 0;
+  height: 30rpx;
+  background-color: white;
+  
+}
