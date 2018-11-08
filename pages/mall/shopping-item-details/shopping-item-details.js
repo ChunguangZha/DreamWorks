@@ -1,4 +1,6 @@
 // pages/mall/shopping-item-details/shopping-item-details.js
+const app = getApp()
+
 Page({
   properties: {
     shopId: {
@@ -26,18 +28,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    try {
-      wx.getStorage({
-        key: this.shopId,
-        success: function(res) {
-          this.setData({
-            shopInfo: res
-          })
-        },
-      })
-    } catch(e) {
-
-    }
+    var item = app.getShopItem(options['shopId']);
+    this.setData({
+      shopInfo: item
+    })
   },
 
   /**

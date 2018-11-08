@@ -21,6 +21,12 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "商城"
+      },
+      {
         "pagePath": "pages/cart/cart-index",
         "iconPath": "image/icon_API.png",
         "selectedIconPath": "image/icon_API_HL.png",

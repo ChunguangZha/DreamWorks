@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -9,6 +9,27 @@
     </block>
   </view>
   <view class="userinfo">
-<shopping-list-item wx:for="{{shoplist}}" wx:key="shopId" myData="{{item.shopId}}"/>
+    <shopping-list-item wx:for="{{shoplist}}" wx:key="shopId" myData="{{item.shopId}}"/>
+  </view>
+</view> -->
+
+
+<view class="index">
+  <view class="index-hd">
+    <image class="index-logo" src="../../image/wechatHL.png"></image>
+    <view class="index-desc">蜜蜂邻家铺，从田间到舌间。</view>
+  </view>
+  <view class="index-bd">
+    <view class="kind-list">
+      <block wx:for-items="{{shoplist}}" wx:key="{{item.shopId}}">
+        <navigator class='navigator' url="../mall/shopping-item-details/shopping-item-details?shopId={{item.shopId}}">
+          <image src='../../pages/assets/{{item.imgName}}'></image>
+          <view>
+            <text class='user-motto'>{{item.title}}</text>
+            <text class='user-motto'>￥{{item.price}}</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
   </view>
 </view>
