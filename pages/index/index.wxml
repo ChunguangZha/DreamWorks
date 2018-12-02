@@ -13,27 +13,34 @@
   </view>
 </view> -->
 
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      <text class="user-motto">{{motto}}</text>
-    </block>
-  </view>
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="user-motto">{{motto}}</text>
+  </block>
+</view>
 <view class="index">
   <view class="index-hd">
     <image class="index-logo" src="../../image/wechatHL.png"></image>
     <view class="index-desc">蜜蜂邻家铺，从田间到舌间。</view>
   </view>
   <view class="index-bd">
-    <view class="kind-list">
+    <view class="kind-list-item">
       <block wx:for-items="{{shoplist}}" wx:key="{{item.shopId}}">
         <navigator class='navigator' url="../mall/shopping-item-details/shopping-item-details?shopId={{item.shopId}}">
           <image src='../../pages/assets/{{item.imgName}}'></image>
           <view>
-            <text class='user-motto'>{{item.title}}</text>
-            <text class='user-motto'>￥{{item.price}}</text>
+            <text class="kind-item-title">{{item.title}}</text>
+            <text class="kind-item-price">￥{{item.price}}</text>
+            <view stle="float:right;">
+              <svg width="20rpx" height="20rpx" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="10" cy="10" r="10" stroke="red" stroke-width="2" fill="red" />
+
+              </svg>
+            </view>
           </view>
         </navigator>
       </block>
