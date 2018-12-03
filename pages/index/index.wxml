@@ -30,17 +30,13 @@
     <view class="kind-list-item">
       <block wx:for-items="{{shoplist}}" wx:key="{{item.shopId}}">
         <navigator class='navigator' url="../mall/shopping-item-details/shopping-item-details?shopId={{item.shopId}}">
-          <image src='../../pages/assets/{{item.imgName}}'></image>
+          <image class="kind-list-img" src='../../pages/assets/{{item.imgName}}'></image>
           <view>
-            <text class="kind-item-title">{{item.title}}</text>
-            <text class="kind-item-price">￥{{item.price}}</text>
-            <view stle="float:right;">
-              <svg width="20rpx" height="20rpx" version="1.1" xmlns="http://www.w3.org/2000/svg">
-
-                <circle cx="10" cy="10" r="10" stroke="red" stroke-width="2" fill="red" />
-
-              </svg>
+            <view style="width:70%">
+              <text class="kind-item-title">{{item.title}}</text>
+              <text class="kind-item-price">￥{{item.price}}</text>
             </view>
+            <image style="float:right" class="cart" src='../../image/cart.png'></image>
           </view>
         </navigator>
       </block>
