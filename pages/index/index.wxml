@@ -27,19 +27,24 @@
     <view class="index-desc">蜜蜂邻家铺，从田间到舌间。</view>
   </view>
   <view class="index-bd">
-    <view class="kind-list-item">
       <block wx:for-items="{{shoplist}}" wx:key="{{item.shopId}}">
-        <navigator class='navigator' url="../mall/shopping-item-details/shopping-item-details?shopId={{item.shopId}}">
+      <div class="kind-list-item">
+        <navigator url="../mall/shopping-item-details/shopping-item-details?shopId={{item.shopId}}">
           <image class="kind-list-img" src='../../pages/assets/{{item.imgName}}'></image>
-          <view>
-            <view style="width:70%">
+        
+        </navigator>
+          <view style="position:relative">
+            <navigator>
               <text class="kind-item-title">{{item.title}}</text>
               <text class="kind-item-price">￥{{item.price}}</text>
+            </navigator>
+            <view style="position:absolute; bottom:0;right:0">
+              <image class="cart" src='../../image/circleplus.png'></image>
+              <input class="order-number" type='number' value='10'/>
+              <image class="cart" src='../../image/circleminus.png'></image>
             </view>
-            <image style="float:right" class="cart" src='../../image/cart.png'></image>
           </view>
-        </navigator>
+        </div>
       </block>
-    </view>
   </view>
 </view>
